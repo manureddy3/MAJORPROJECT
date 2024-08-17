@@ -48,6 +48,7 @@ font-size: 2rem;
 .f-info-social i{
     margin-right: 1rem;
     font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
 .f-info{
@@ -58,6 +59,7 @@ font-size: 2rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: space-evenly;
+    
 }
 
 .listing-card{

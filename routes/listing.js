@@ -27,21 +27,20 @@ router.get("/new",
 );
 
 
-  router
-   .route("/:id")
-   .get(wrapAsync(listingController.showListing))
-   .put(
-    isLoggedIn,
-    isOwner,
-    upload.single('listing[image]'),
-    validateListing,
-    wrapAsync(listingController,listingController.updateListing)
-    )
-   .delete(
-    isLoggedIn,
-    isOwner,
-    wrapAsync(listingController.destroyListing)
-   );
+router
+.route("/:id")
+.get(wrapAsync(listingController.showListing))
+.put(
+ isLoggedIn,
+ isOwner,
+ upload.single('listing[image]'),
+ validateListing,wrapAsync(listingController.updateListing
+ ))
+.delete(
+ isLoggedIn,
+ isOwner,
+ wrapAsync(listingController.destroyListing)
+);
 
 
 //Edit route
